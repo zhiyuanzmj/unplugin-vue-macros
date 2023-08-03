@@ -3,8 +3,8 @@ import {
   MagicString,
   REGEX_SETUP_SFC,
   babelParse,
+  generateTransform,
   getLang,
-  getTransformResult,
   parseSFC,
 } from '@vue-macros/common'
 import { vIfTransform } from './v-if'
@@ -39,5 +39,5 @@ export function transformJsxDirective(code: string, id: string) {
     vForTransform(ast, s, offset)
   }
 
-  return getTransformResult(s, id)
+  return generateTransform(s, id)
 }

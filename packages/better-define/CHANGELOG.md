@@ -1,5 +1,23 @@
 # @vue-macros/better-define
 
+## 1.6.8
+
+### Patch Changes
+
+- Updated dependencies [[`0a1cbf79`](https://github.com/vue-macros/vue-macros/commit/0a1cbf796f00e774ba48ff019fec0e008e311faa)]:
+  - @vue-macros/common@1.6.2
+  - @vue-macros/api@0.8.2
+
+## 1.6.7
+
+### Patch Changes
+
+- [`07a311c7`](https://github.com/vue-macros/vue-macros/commit/07a311c7c21894cea6c7cfdff703cd044a4445a2) Thanks [@sxzz](https://github.com/sxzz)! - improve sourcemap hires
+
+- Updated dependencies [[`07a311c7`](https://github.com/vue-macros/vue-macros/commit/07a311c7c21894cea6c7cfdff703cd044a4445a2)]:
+  - @vue-macros/common@1.6.1
+  - @vue-macros/api@0.8.1
+
 ## 1.6.6
 
 ### Patch Changes

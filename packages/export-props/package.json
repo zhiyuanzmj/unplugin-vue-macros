@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/export-props",
-  "version": "0.3.12",
+  "version": "0.3.14",
   "packageManager": "pnpm@8.6.11",
   "description": "export-props feature from Vue Macros.",
   "keywords": [
@@ -99,7 +99,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "peerDependencies": {

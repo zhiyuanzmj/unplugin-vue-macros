@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/better-define",
-  "version": "1.6.6",
+  "version": "1.6.8",
   "packageManager": "pnpm@8.6.11",
   "description": "better-define feature from Vue Macros.",
   "keywords": [
@@ -99,7 +99,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "dependencies": {

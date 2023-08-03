@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/export-expose",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "packageManager": "pnpm@8.6.11",
   "description": "export-expose feature from Vue Macros.",
   "keywords": [
@@ -99,7 +99,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "peerDependencies": {

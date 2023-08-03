@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/define-props-refs",
-  "version": "1.1.4",
+  "version": "1.1.6",
   "packageManager": "pnpm@8.6.11",
   "description": "define-props-refs feature from Vue Macros.",
   "keywords": [
@@ -100,7 +100,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "peerDependencies": {

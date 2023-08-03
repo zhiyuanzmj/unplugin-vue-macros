@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/reactivity-transform",
-  "version": "0.3.16",
+  "version": "0.3.18",
   "packageManager": "pnpm@8.6.11",
   "description": "reactivity-transform feature from Vue Macros.",
   "keywords": [
@@ -100,7 +100,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "peerDependencies": {

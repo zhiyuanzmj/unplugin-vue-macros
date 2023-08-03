@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/define-prop",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "packageManager": "pnpm@8.6.11",
   "description": "define-prop feature from Vue Macros.",
   "keywords": [
@@ -100,7 +100,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "peerDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "unplugin-vue-macros",
-  "version": "2.4.0",
+  "version": "2.4.2",
   "packageManager": "pnpm@8.6.11",
   "description": "Explore more macros and syntax sugar to Vue.",
   "keywords": [
@@ -91,7 +91,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "peerDependencies": {

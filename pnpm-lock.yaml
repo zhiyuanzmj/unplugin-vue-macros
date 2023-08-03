@@ -66,8 +66,8 @@ importers:
         specifier: ^5.0.1
         version: 5.0.1
       tsup:
-        specifier: ^7.1.0
-        version: 7.1.0(typescript@5.1.6)
+        specifier: ^7.2.0
+        version: 7.2.0(typescript@5.1.6)
       tsx:
         specifier: ^3.12.7
         version: 3.12.7
@@ -157,6 +157,19 @@ importers:
       rollup:
         specifier: ^3.27.0
         version: 3.27.0
+
+  packages/boolean-prop:
+    dependencies:
+      '@vue-macros/common':
+        specifier: workspace:*
+        version: link:../common
+      '@vue/compiler-core':
+        specifier: ^3.3.4
+        version: 3.3.4
+    devDependencies:
+      '@vue/compiler-sfc':
+        specifier: ^3.3.4
+        version: 3.3.4
 
   packages/chain-call:
     dependencies:
@@ -515,6 +528,9 @@ importers:
       '@nuxt/kit':
         specifier: ^3.6.5
         version: 3.6.5
+      '@vue-macros/boolean-prop':
+        specifier: workspace:*
+        version: link:../boolean-prop
       '@vue-macros/short-vmodel':
         specifier: workspace:*
         version: link:../short-vmodel
@@ -776,6 +792,9 @@ importers:
       '@vitejs/plugin-vue-jsx':
         specifier: ^3.0.1
         version: 3.0.1(vite@4.4.7)(vue@3.3.4)
+      '@vue-macros/boolean-prop':
+        specifier: workspace:*
+        version: link:../../packages/boolean-prop
       '@vue-macros/short-vmodel':
         specifier: workspace:*
         version: link:../../packages/short-vmodel
@@ -9545,8 +9564,8 @@ packages:
     resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
     dev: true
 
-  /tsup@7.1.0(typescript@5.1.6):
-    resolution: {integrity: sha512-mazl/GRAk70j8S43/AbSYXGgvRP54oQeX8Un4iZxzATHt0roW0t6HYDVZIXMw0ZQIpvr1nFMniIVnN5186lW7w==}
+  /tsup@7.2.0(typescript@5.1.6):
+    resolution: {integrity: sha512-vDHlczXbgUvY3rWvqFEbSqmC1L7woozbzngMqTtL2PGBODTtWlRwGDDawhvWzr5c1QjKe4OAKqJGfE1xeXUvtQ==}
     engines: {node: '>=16.14'}
     hasBin: true
     peerDependencies:

@@ -4,12 +4,14 @@ import {
   type Options as OptionsShortVmodel,
   transformShortVmodel,
 } from '@vue-macros/short-vmodel'
+import { transformBooleanProp } from '@vue-macros/boolean-prop'
 import { type Options, resolveOptions } from 'unplugin-vue-macros'
 import { type Plugin } from 'vite'
 import type {} from '@nuxt/devtools'
 import { type VolarOptions } from '@vue-macros/volar'
 
 export type VueMacrosOptions = Options & {
+  booleanProp?: {} | false
   shortVmodel?: OptionsShortVmodel | false
 }
 
@@ -94,6 +96,9 @@ export default defineNuxtModule<VueMacrosOptions>({
     if (resolvedOptions.exportProps)
       volarPlugins.push('@vue-macros/volar/export-props')
 
+    if (resolvedOptions.jsxDirective)
+      volarPlugins.push('@vue-macros/volar/jsx-directive')
+
     if (resolvedOptions.defineProp)
       vueCompilerOptions.experimentalDefinePropProposal =
         resolvedOptions.defineProp.edition || 'kevinEdition'
@@ -104,20 +109,24 @@ export default defineNuxtModule<VueMacrosOptions>({
       nuxt.options.vite.vue.include = [nuxt.options.vite.vue.include]
     nuxt.options.vite.vue.include.push(/\.setup\.[cm]?[jt]sx?$/)
 
-    if (options.shortVmodel !== false) {
-      volarPlugins.push('@vue-macros/volar/short-vmodel')
-
-      if (options.shortVmodel)
-        volarOptions.shortVmodel = {
-          prefix: options.shortVmodel.prefix,
-        }
-
+    if (options.shortVmodel !== false || options.booleanProp !== false) {
       nuxt.options.vite.vue.template ||= {}
       nuxt.options.vite.vue.template.compilerOptions ||= {}
       nuxt.options.vite.vue.template.compilerOptions.nodeTransforms ||= []
-      nuxt.options.vite.vue.template.compilerOptions.nodeTransforms.push(
-        transformShortVmodel(options.shortVmodel)
-      )
+      const { nodeTransforms } = nuxt.options.vite.vue.template.compilerOptions
+
+      if (options.shortVmodel !== false) {
+        volarPlugins.push('@vue-macros/volar/short-vmodel')
+        nodeTransforms.push(transformShortVmodel(options.shortVmodel))
+        if (options.shortVmodel) {
+          volarOptions.shortVmodel = {
+            prefix: options.shortVmodel.prefix,
+          }
+        }
+      }
+
+      if (options.booleanProp !== false)
+        nodeTransforms.push(transformBooleanProp())
     }
   },
 })

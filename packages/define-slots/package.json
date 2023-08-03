@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/define-slots",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "packageManager": "pnpm@8.6.11",
   "description": "define-slots feature from Vue Macros.",
   "keywords": [
@@ -100,7 +100,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "peerDependencies": {

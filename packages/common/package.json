@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/common",
-  "version": "1.6.0",
+  "version": "1.6.2",
   "packageManager": "pnpm@8.6.11",
   "description": "common feature from Vue Macros.",
   "keywords": [
@@ -45,7 +45,7 @@
     ]
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "peerDependencies": {

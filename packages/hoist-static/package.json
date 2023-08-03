@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/hoist-static",
-  "version": "1.4.6",
+  "version": "1.4.8",
   "packageManager": "pnpm@8.6.11",
   "description": "hoist-static feature from Vue Macros.",
   "keywords": [
@@ -90,7 +90,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/define-emit",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "packageManager": "pnpm@8.6.11",
   "description": "define-emit feature from Vue Macros.",
   "keywords": [
@@ -100,7 +100,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "peerDependencies": {

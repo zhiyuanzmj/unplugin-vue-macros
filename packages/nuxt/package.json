@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/nuxt",
-  "version": "1.3.20",
+  "version": "1.4.1",
   "packageManager": "pnpm@8.6.11",
   "description": "nuxt feature from Vue Macros.",
   "keywords": [
@@ -45,7 +45,7 @@
     ]
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "peerDependencies": {
@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.6.5",
+    "@vue-macros/boolean-prop": "workspace:*",
     "@vue-macros/short-vmodel": "workspace:*",
     "@vue-macros/volar": "workspace:*",
     "unplugin-vue-macros": "workspace:*"

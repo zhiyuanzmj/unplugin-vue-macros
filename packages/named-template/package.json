@@ -1,6 +1,6 @@
 {
   "name": "@vue-macros/named-template",
-  "version": "0.3.13",
+  "version": "0.3.15",
   "packageManager": "pnpm@8.6.11",
   "description": "named-template feature from Vue Macros.",
   "keywords": [
@@ -99,7 +99,7 @@
     }
   },
   "scripts": {
-    "build": "tsup && tsx ../../scripts/postbuild.ts",
+    "build": "tsup",
     "dev": "DEV=true tsup"
   },
   "dependencies": {
